@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Disorder by Joy Division</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<h1> SHES LOST CONTROL </h1>
+
+<body>
+
+<img id="backimage" src="images/joydivision.gif">
+
+<audio id="Disorder">
+  <source src="audio/control.mp3" type="audio/mpeg">
+</audio>
+
+<div id="firstbox"> </div>
+
+<button onclick="playMusic()"> Press to lose control </button>
+<button onclick="pauseMusic()"> take a break </button>
+<button onclick="stopMusic()"> regain control </button>
+
+<button onclick="Click()"> Click to see Ian Dance </button>
+
+
+<script type="text/javascript">
+
+	var mainImage = document.getElementById("backimage");
+	var counter = 0;
+	var a = document.getElementById("Disorder")
+	var checkThis;
+	var prevTime = 0;
+	var b = 0;
+	
+
+	function Click () {
+	counter = counter + 1;
+	console.log (counter);
+	if (counter == 1) {
+		mainImage.src = "images/ian1.gif";
+	}
+
+	if (counter == 2) {
+		mainImage.src = "images/ian2.gif"
+	}
+
+	if (counter == 3) {
+		mainImage.src = "images/ian4.gif";
+
+	}
+
+	if (counter == 4) {
+		mainImage.src = "images/ian5.gif";
+
+	}
+
+	if (counter == 5) {
+		mainImage.src = "images/ianend.gif";
+		counter = 0;
+
+	}
+
+	}
+
+	function playMusic () {
+		a.play();
+	}
+
+	function pauseMusic () {
+		a.pause();
+	}
+
+	function stopMusic () {
+		a.currentTime = 0;
+		a.pause();
+	}
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
